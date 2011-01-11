@@ -32,7 +32,17 @@ BEGIN {
    is_deeply $a, [1..4],  q{a is 1..4};
    is_deeply $b, [5],     q{b is 5};
    is_deeply $c, [6..10], q{c is 6..10};
+}
 
+
+{
+   my ($x,$y,$z) = List::Bisect::trisect { $_ < 5 ? -1 
+                                         : $_ > 5 ? 1
+                                         : 'foo' 
+                                         } 1..10;
+   is_deeply $x, [1..4],  q{x is 1..4};
+   is_deeply $y, [],      q{y is empty};
+   is_deeply $z, [5..10], q{z is 5..10};
 }
 
 
