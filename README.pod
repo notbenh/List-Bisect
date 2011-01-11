@@ -9,3 +9,13 @@
 Useage is like grep where you pass it a block and a list, returns a list of two arrayrefs. All 
 TRUE values are put in to the first arrayref, FALSE in the second arrayref.
 
+=head2 trisect
+
+  my ($a,$b,$c) = trisect {$_ <=> 5} 1..10;
+  # $a == [1..4]
+  # $b == [5]
+  # $c == [6..10]
+
+Useage is like grep where you pass it a block and a list, returns a list of two arrayrefs. All 
+TRUE values are put in to the first arrayref, FALSE in the second arrayref.
+
