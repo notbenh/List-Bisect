@@ -2,8 +2,7 @@ package List::Bisect;
 use strict;
 use warnings;
 use Exporter qw{import};
-our @EXPORT = qw{bisect};
-our @EXPORT_OK = qw{trisect};
+our @EXPORT = qw{bisect trisect};
 
 # ABSTRACT: split a list in to two parts by way of a grep like block
 
